@@ -93,7 +93,7 @@ st.markdown("""
 # =========================================================
 # 4. GIAO DIỆN ỨNG DỤNG (UI)
 # =========================================================
-st.title(" ỨNG DỤNG DỊCH ĐA NGÔN NGỮ ")
+st.title(" ỨNG DỤNG DỊCH ĐA PHƯƠNG THỨC ANH - VIỆT ")
 st.caption("Môn: Kĩ thuật học sâu và ứng dụng | SV: Ngô Thị Quỳnh Hương | MSV: 99048 | Tech: Gemini 2.0 & LangSmith")
 
 tab_text, tab_image, tab_doc = st.tabs(["🔤 Văn Bản", "📸 Hình Ảnh", "📂 Tài Liệu"])
@@ -160,3 +160,4 @@ with tab_doc:
                 ans = translate_engine(content_payload, temperature=temp_val, max_tokens=max_token_val)
                 res_doc.markdown(f'<div class="result-box">{ans}</div>', unsafe_allow_html=True)
                 st.download_button("📥 Tải xuống bản dịch (.txt)", ans, file_name=f"translated_{up_doc.name}.txt")
+
